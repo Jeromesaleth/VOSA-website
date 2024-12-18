@@ -1,0 +1,15 @@
+
+@media (max-width: 320px) {
+    .icon {
+        display: none;
+    }
+    .nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 10px;
+    }
+    .p-3 h4,h3,h6 {
+        font-family: 10px;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Cards</title>
+</head>
+<div  style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f3f3f3;">
+    <div style="display: flex; gap: 20px;">
+        <!-- Card 1 -->
+        <div style="width: 150px; height: 200px; border-radius: 10px; background-color: #009CFF; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; cursor: pointer; transition: background-color 0.3s;">
+            <div style="font-size: 50px; margin-bottom: 10px;">📞</div>
+            <div style="font-size: 18px;">Call Us</div>
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #0816D3; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 10px; opacity: 0; transition: opacity 0.3s;">
+                <div>+123 456 7890</div>
+                <div>+987 654 3210</div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div style="width: 150px; height: 200px; border-radius: 10px; background-color: #009CFF; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; cursor: pointer; transition: background-color 0.3s;">
+            <div style="font-size: 50px; margin-bottom: 10px;">✉️</div>
+            <div style="font-size: 18px;">Email Us</div>
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #0816D3; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 10px; opacity: 0; transition: opacity 0.3s;">
+                <div>email@example.com</div>
+                <div>support@example.com</div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div style="width: 150px; height: 200px; border-radius: 10px; background-color: #009CFF; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; cursor: pointer; transition: background-color 0.3s;">
+            <div style="font-size: 50px; margin-bottom: 10px;">📍</div>
+            <div style="font-size: 18px;">Find Us</div>
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #0816D3; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 10px; opacity: 0; transition: opacity 0.3s;">
+                <div>123 Main St</div>
+                <div>City, Country</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('div[style]').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const overlay = card.querySelector('div[style*="position: absolute"]');
+                if (overlay) overlay.style.opacity = '1';
+            });
+            card.addEventListener('mouseleave', () => {
+                const overlay = card.querySelector('div[style*="position: absolute"]');
+                if (overlay) overlay.style.opacity = '0';
+            });
+        });
+    </script>
+</div>
+</html>
